@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Medical Report Generation Training Script V3.0
-# Fine-tuning based on previous experimental successes
+
 
 python main.py \
     --use_clip \
