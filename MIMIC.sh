@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Target: BLEU_1>39.6%, BLEU_4>11.6%, CIDEr>0.116
-# Strategy: Aggressive optimization based on failure case analysis
+
 
 python main.py \
     --version CLIP \
