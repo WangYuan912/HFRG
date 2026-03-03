@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b7494eb6-05de-4332-b1f6-263395079767" name="wy">
+        <fileTransfer rootFolder="/home/r/文档/wy/I-HDA" accessType="SFTP" host="100.88.109.48" port="22" sshConfigId="d0f797be-d65d-43f1-8ab6-88f367a09d92" sshConfig="r@100.88.109.48:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

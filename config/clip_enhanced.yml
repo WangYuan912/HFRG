@@ -1,0 +1,53 @@
+# configs/clip_enhanced.yml
+# CLIP增强模型的配置文件
+
+# 基础数据设置
+image_dir: 'data/iu_xray/images/'
+ann_path: 'data/iu_xray/annotation.json'
+label_path: 'data/labels/IU/IU_lab.csv'
+dataset_name: 'iu_xray'
+image_size: 256
+crop_size: 224
+
+# 模型设置
+version: 'CLIP'
+visual_extractor: 'resnet101'
+d_model: 512
+d_ff: 512
+d_vf: 2048
+num_heads: 8
+num_layers: 6
+num_labels: 14
+dropout: 0.1
+
+# CLIP增强设置
+use_clip: true
+clip_model_name: 'ViT-B/32'  # 可选: 'ViT-B/16', 'ViT-L/14'
+clip_feature_dim: 512
+clip_weight: 0.3
+global_align_weight: 0.15
+local_align_weight: 0.15
+temperature_init: 0.07
+freeze_clip: true
+
+# 训练设置
+batch_size: 16
+epochs: 100
+lr_ve: 3e-5
+lr_ed: 3e-5
+weight_decay: 3e-5
+grad_clip: 5.0
+
+# 损失设置
+label_loss: true
+rank_loss: true
+
+# 其他设置
+max_seq_length: 60
+threshold: 3
+num_workers: 4
+n_gpu: 1
+save_period: 1
+monitor_mode: 'max'
+monitor_metric: 'BLEU_4'
+early_stop: 50
